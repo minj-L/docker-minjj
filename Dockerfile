@@ -5,7 +5,7 @@ FROM node:16
 WORKDIR /usr/src/app
   
 # Step 3
-ADD github.com/minj-L/docker-minjj/node.tar.gz /docker-minjj
+ADD github.com/minj-L/docker-minjj/node /docker-minjj
 WORKDIR /docker-minjj
 RUN npm install
 
