@@ -8,7 +8,7 @@ app.set('port', process.env.Port || 3000)
 app.use(morgan('dev'))
 
 var db;
-var databaseUrl="mongodb+srv://admin:1234@cluster0.uzxwi96.mongodb.net/?    retryWrites=true&w=majority"
+var databaseUrl="mongodb+srv://admin:1234@cluster0.uzxwi96.mongodb.net/?retryWrites=true&w=majority"
 
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + "/index.html");
@@ -26,7 +26,7 @@ app.get('/users', (req, res) => {
 				console.log(result)
 				// res.json(JSON.stringify(result))
 
-				res.writeHead(200);
+				res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
 				var template = `
 					<table border="1" margin: auto; text-align: center;>
 					<tr>
