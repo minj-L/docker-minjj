@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
   
 # Step 3
 RUN git clone https://github.com/minj-L/docker-minjj
-WORKDIR /node
+WORKDIR docker-minjj
 RUN npm install
 
 # Step 4
